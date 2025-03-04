@@ -1,10 +1,9 @@
 package equipo.jugador.defensa;
 
 import equipo.Equipo;
-import equipo.jugador.Jugador;
 import equipo.jugador.enums.EnumPuesto;
 
-public abstract class Lateral extends Jugador {
+public abstract class Lateral extends Defensa {
 	private int disputasRealizadas;
 	private EnumPuesto puesto;
 	
@@ -28,4 +27,16 @@ public abstract class Lateral extends Jugador {
 		this.puesto = puesto;
 	}
 	
+	public void mostraDatos(){
+		System.out.println(this);
+	}
+	
+	@Override
+	public String toString() {
+		String result = "Lateral \n";
+		result +="Nombre = "+ this.getNombre() 
+		+ " Dorsal= " + this.getDorsal()
+		+" Equipo =" + this.getEquipo();
+		return result;
+	}
 }
