@@ -3,17 +3,17 @@ package equipo.jugador;
 import equipo.Equipo;
 
 public abstract class Jugador {
-	
+
 	private String nombre;
 	private int dorsal;
 	private Equipo equipo;
-	
+
 	public Jugador(String nombre, int dorsal, Equipo equipo) {
 		setNombre(nombre);
 		setDorsal(dorsal);
 		setEquipo(equipo);
 	}
-	
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -39,5 +39,5 @@ public abstract class Jugador {
 	}
 
 	public abstract void mostrarDatos();
-	
+
 }
