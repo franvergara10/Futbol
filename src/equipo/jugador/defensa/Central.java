@@ -1,12 +1,14 @@
 package equipo.jugador.defensa;
 
-public class Central {
+import equipo.Equipo;
+
+public abstract class Central extends Defensa {
 	private int disputasRealizadas;
 	private int entradas;
 	
-	public Central() {
-		setDisputasRealizadas(disputasRealizadas);
-		setEntradas(entradas);
+	public Central(String nombre, int dorsal, Equipo equipo) {
+         super(nombre,dorsal,equipo);
+         setEntradas(entradas);
 	}
 	public void setDisputasRealizadas(int disputasRealizadas) {
 		
@@ -19,6 +21,17 @@ public class Central {
 	}
 	public int getEntradas() {
 		return this.entradas;
+	}
+	public void mostraDatos(){
+		System.out.println(this);
+	}
+	@Override
+	public String toString() {
+		String result = "Central \n";
+		result +="Nombre = "+ this.getNombre() 
+		+ " Dorsal= " + this.getDorsal()
+		+" Equipo =" + this.getEquipo();
+		return result;
 	}
 	
 
