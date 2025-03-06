@@ -39,5 +39,26 @@ public abstract class Jugador {
 	}
 
 	public abstract void mostrarDatos();
+	
+	@Override
+	public String toString() {
+		String result = "Jugador \n";
+		result +="Nombre = "+ this.getNombre() 
+		+ " Dorsal= " + this.getDorsal()
+		+" Equipo =" + this.getEquipo();
+		return result;
+	}
+	  @Override
+	    public boolean equals(Object obj) {
+	        if (this == obj) return true;
+	        if (obj == null || getClass() != obj.getClass()) return false;
+	        
+	        Jugador jugador = (Jugador) obj;
+	        return dorsal == jugador.dorsal && 
+	               nombre.equals(jugador.nombre) && 
+	               equipo.equals(jugador.equipo);
+	    }
+
+
 
 }

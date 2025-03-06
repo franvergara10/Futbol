@@ -21,13 +21,10 @@ public class Pivote extends Centrocampista {
 
 	@Override
 	public void mostrarDatos() {
-		// TODO Auto-generated method stub
+		
+		    
+		}
 		
 	}
 	
-	
-	
-	
-	
 
-}
