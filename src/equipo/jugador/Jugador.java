@@ -40,6 +40,7 @@ public abstract class Jugador {
 
 	public abstract void mostrarDatos();
 	
+
 	@Override
 	public String toString() {
 		String result = "Jugador \n";
@@ -58,6 +59,7 @@ public abstract class Jugador {
 	               nombre.equals(jugador.nombre) && 
 	               equipo.equals(jugador.equipo);
 	    }
+
 
 
 

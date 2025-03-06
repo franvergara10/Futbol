@@ -5,6 +5,7 @@ import equipo.jugador.Jugador;
 
 
 public class Equipo {
+
 	private String nombre;
     private Jugador[] alineacion;
     
@@ -47,5 +48,6 @@ public class Equipo {
             }
         }
     }
+
 
     
