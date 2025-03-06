@@ -39,11 +39,21 @@ public abstract class Lateral extends Defensa {
 		+" Equipo =" + this.getEquipo();
 		return result;
 	}
-	 @Override
-	    public boolean equals(Object obj) {
-	        if (!super.equals(obj)) return false;
-	        Lateral lateral = (Lateral) obj;
-	        return puesto.equals(lateral.puesto);
-	    }
+	@Override
+	public boolean equals(Object obj) {
+		if(obj == null) {
+			return false;
+		}
+		if(!this.getClass().equals(obj.getClass())) {
+			return false;
+		}
+		boolean iguales = false;
+		Lateral otroJugador = (Lateral) obj;
+		if(super.equals(obj) && this.disputasRealizadas == otroJugador.disputasRealizadas) {
+			iguales = true;
+		}
+		return iguales;
+
+	}
 
 }

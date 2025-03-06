@@ -20,21 +20,13 @@ public class Pivote extends Centrocampista {
 	}
 
 	@Override
-	public String toString() {
-		return "Pivote [getIntercepciones()=" + getIntercepciones() + ", getNombre()=" + getNombre() + ", getDorsal()="
-				+ getDorsal() + ", getEquipo()=" + getEquipo() + "]";
-	}
-
-	@Override
-	public void mostrarDatos() {
-
-		
-		    
+	public void mostrarDatos() {  
+		System.out.println(this);
 		}
 	
 	@Override
 	public String toString() {
-		String result = "Central \n";
+		String result = "Centrocampista \n";
 		result +="Nombre = "+ this.getNombre() 
 		+ " Dorsal= " + this.getDorsal()
 		+" Equipo =" + this.getEquipo();
@@ -54,14 +46,15 @@ public class Pivote extends Centrocampista {
 			iguales = true;
 		}
 		return iguales;
-
+	
+		
 	}
 		
 	}
 	
 
-		System.out.println(this);
+		
 
-	}
+	
 
 
