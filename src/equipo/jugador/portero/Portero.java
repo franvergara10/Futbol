@@ -28,12 +28,22 @@ public abstract class Portero extends Jugador {
 		+" Equipo =" + this.getEquipo();
 		return result;
 	}
-	 @Override
-	    public boolean equals(Object obj) {
-	        if (!super.equals(obj)) return false;
-	        Portero portero = (Portero) obj;
-	        return paradas == portero.paradas;
-	    }
+	@Override
+	public boolean equals(Object obj) {
+		if(obj == null) {
+			return false;
+		}
+		if(!this.getClass().equals(obj.getClass())) {
+			return false;
+		}
+		boolean iguales = false;
+		Portero otroJugador = (Portero) obj;
+		if(super.equals(obj) && this.paradas == otroJugador.paradas) {
+			iguales = true;
+		}
+		return iguales;
+
+	}
 
 	
 	
