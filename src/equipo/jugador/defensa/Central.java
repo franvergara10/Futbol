@@ -33,6 +33,13 @@ public abstract class Central extends Defensa {
 		+" Equipo =" + this.getEquipo();
 		return result;
 	}
+	 @Override
+	    public boolean equals(Object obj) {
+	        if (!super.equals(obj)) return false;
+	        Central central = (Central) obj;
+	        return entradas == central.entradas;
+	    }
+
 	
 
 }

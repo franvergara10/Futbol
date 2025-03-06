@@ -35,5 +35,12 @@ public abstract class Defensa extends Jugador {
 		+" Equipo =" + this.getEquipo();
 		return result;
 	}
+	 @Override
+	    public boolean equals(Object obj) {
+	        if (!super.equals(obj)) return false;
+	        Defensa defensa = (Defensa) obj;
+	        return disputasRealizadas == defensa.disputasRealizadas;
+	    }
+
 
 }
