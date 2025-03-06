@@ -19,5 +19,29 @@ public abstract class Centrocampista extends Jugador {
 	public void setPasesCompletados(int pasesCompletados) {
 		this.pasesCompletados = pasesCompletados;
 	}
+	@Override
+	public String toString() {
+		String result = "Jugador \n";
+		result +="Nombre = "+ this.getNombre() 
+		+ " Dorsal= " + this.getDorsal()
+		+" Equipo =" + this.getEquipo();
+		return result;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj == null) {
+			return false;
+		}
+		if(!this.getClass().equals(obj.getClass())) {
+			return false;
+		}
+		boolean iguales = false;
+		Centrocampista otroJugador = (Centrocampista) obj;
+		if(super.equals(obj) && this.pasesCompletados == otroJugador.pasesCompletados) {
+			iguales = true;
+		}
+		return iguales;
 
+	}
 }
