@@ -1,13 +1,12 @@
 package equipo.jugador.centrocampista;
 
-import equipo.Equipo;
 import equipo.jugador.Jugador;
 
-public abstract class Centrocampista extends Jugador {
+public class Centrocampista extends Jugador {
 
 	private int pasesCompletados;
 
-	public Centrocampista(String nombre, int dorsal, Equipo equipo, int pasesCompletados) {
+	public Centrocampista(String nombre, int dorsal, String equipo, int pasesCompletados) {
 		super(nombre, dorsal, equipo);
 		setPasesCompletados(pasesCompletados);
 	}
@@ -19,6 +18,10 @@ public abstract class Centrocampista extends Jugador {
 	public void setPasesCompletados(int pasesCompletados) {
 		this.pasesCompletados = pasesCompletados;
 	}
+	public void mostrarDatos(){
+		System.out.println(this);
+	}
+	
 	@Override
 	public String toString() {
 		String result = "Jugador \n";

@@ -1,14 +1,12 @@
 package equipo.jugador;
 
-import equipo.Equipo;
-
 public abstract class Jugador {
 
 	private String nombre;
 	private int dorsal;
-	private Equipo equipo;
+	private String equipo;
 
-	public Jugador(String nombre, int dorsal, Equipo equipo) {
+	public Jugador(String nombre, int dorsal, String equipo) {
 		setNombre(nombre);
 		setDorsal(dorsal);
 		setEquipo(equipo);
@@ -30,11 +28,11 @@ public abstract class Jugador {
 		this.dorsal = dorsal;
 	}
 
-	public Equipo getEquipo() {
+	public String getEquipo() {
 		return equipo;
 	}
 
-	public void setEquipo(Equipo equipo) {
+	public void setEquipo(String equipo) {
 		this.equipo = equipo;
 	}
 

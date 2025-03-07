@@ -1,6 +1,5 @@
 package equipo.jugador.defensa;
 
-import equipo.Equipo;
 import equipo.jugador.Jugador;
 import equipo.jugador.enums.EnumPuesto;
 
@@ -9,7 +8,7 @@ public abstract class Defensa extends Jugador {
 	private int disputasRealizadas;
 	private EnumPuesto puesto;
 	
-	public Defensa(String nombre, int dorsal, Equipo equipo) {
+	public Defensa(String nombre, int dorsal, String equipo,int disputasRealizadas) {
 		super(nombre,dorsal,equipo);
 		setDisputasRealizadas(disputasRealizadas);
 	}
@@ -23,7 +22,7 @@ public abstract class Defensa extends Jugador {
 		return puesto;
 	}
 	
-	public void mostraDatos(){
+	public void mostrarDatos(){
 		System.out.println(this);
 	}
 	@Override
