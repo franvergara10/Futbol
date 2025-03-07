@@ -28,8 +28,10 @@ public  class Lateral extends Defensa {
 	public String toString() {
 		String result = "Lateral \n";
 		result +="Nombre = "+ this.getNombre() 
+		+" puesto = Lateral "+ this.getPuesto()
 		+ " Dorsal= " + this.getDorsal()
-		+" Equipo =" + this.getEquipo();
+		+" Equipo =" + this.getEquipo()
+		+" Disputas = "+this.getDisputasRealizadas();
 		return result;
 	}
 	@Override

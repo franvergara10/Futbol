@@ -16,16 +16,18 @@ import equipo.jugador.portero.Portero;
 public class Main {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+		Scanner sca = new Scanner(System.in);
         Equipo equipo = null;
         Jugador[] jugadores = new Jugador[11];
-        Equipo[] equipos = new Equipo[3];
-        equipos[0] = new Equipo("Real Madrid");
-        equipos[1] = new Equipo("FC Barcelona");
-        equipos[2] = new Equipo("Manchester City");
+        // Equipo[] equipos = new Equipo[3];
+        //equipos[0] = new Equipo("Real Madrid");
+        //equipos[1] = new Equipo("FC Barcelona");
+        //equipos[2] = new Equipo("Manchester City");
         
-        
-        
+        // Central c1 = new Central("Rüdiger", 2, "Real Madrid", 90, 30);
+        // c1.mostrarDatos();
+        // Lateral l1 = new Lateral("Carvajal", 2, "equipo", 100, EnumPuesto.DERECHO);
+        // l1.mostrarDatos();
         int opcion;
         do {
             System.out.println("\n--- Menú de Gestión de Equipo ---");
@@ -34,13 +36,13 @@ public class Main {
             System.out.println("3. Mostrar datos de los jugadores");
             System.out.println("4. Salir");
             System.out.print("Elige una opción: ");
-            opcion = scanner.nextInt();
-            scanner.nextLine(); 
+            opcion = sca.nextInt();
+            sca.nextLine(); 
 
             switch (opcion) {
                 case 1:
                     System.out.print("Introduce el nombre del equipo: ");
-                    String nombreEquipo = scanner.nextLine();
+                    String nombreEquipo = sca.nextLine();
                     equipo = new Equipo(nombreEquipo);
                     System.out.println("Equipo creado: " + nombreEquipo);
                     break;
@@ -50,7 +52,7 @@ public class Main {
                         System.out.println("¡Primero debes crear un equipo!");
                         break;
                     }
-                    agregarJugadores(jugadores, scanner, equipo.getNombre());
+                    agregarJugadores(jugadores, sca, equipo.getNombre());
                     break;
 
                 case 3:
@@ -70,7 +72,7 @@ public class Main {
             }
         } while (opcion != 4);
 
-        scanner.close();
+    
     }
 
     public static void agregarJugadores(Jugador[] jugadores, Scanner scanner, String equipo) {
