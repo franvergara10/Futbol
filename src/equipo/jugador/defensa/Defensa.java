@@ -25,6 +25,7 @@ public abstract class Defensa extends Jugador {
 	public void mostrarDatos(){
 		System.out.println(this);
 	}
+	
 	@Override
 	public String toString() {
 		String result = "Defensa \n";
