@@ -1,8 +1,5 @@
 package equipo.jugador.delantero;
 
-
-
-import equipo.Equipo;
 import equipo.jugador.Jugador;
 
 
@@ -10,7 +7,7 @@ public abstract class Delantero extends Jugador {
 
 	private int goles;
 
-	public Delantero(String nombre, int dorsal, Equipo equipo, int goles) {
+	public Delantero(String nombre, int dorsal, String equipo, int goles) {
 		super(nombre, dorsal, equipo);
 		setGoles(goles);
 
@@ -22,6 +19,10 @@ public abstract class Delantero extends Jugador {
 
 	public void setGoles(int goles) {
 		this.goles = goles;
+	}
+	
+	public void mostrarDatos(){
+		System.out.println(this);
 	}
 	@Override
 	public String toString() {

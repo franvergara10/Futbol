@@ -1,38 +1,36 @@
-package equipo.jugador.defensa;
+package equipo.jugador.delantero;
 
 import equipo.jugador.enums.EnumPuesto;
 
-public  class Lateral extends Defensa {
-
+public class Extremo extends Delantero {
 	private EnumPuesto puesto;
-	
-	public Lateral(String nombre, int dorsal, String equipo, int disputasRealizadas, EnumPuesto puesto) {
-		super(nombre,dorsal,equipo,disputasRealizadas);
-		 setPuesto(puesto);
+
+	public Extremo(String nombre,int dorsal,String equipo,int goles, EnumPuesto puesto) {
+		super(nombre,dorsal,equipo,goles);
+		setPuesto(puesto);
 	}
-
-
+	
 	public EnumPuesto getPuesto() {
 		return puesto;
 	}
-
-	public void setPuesto(EnumPuesto puesto) {
-		this.puesto = puesto;
-	}
 	
+	public void setPuesto(EnumPuesto puesto) {
+		this.puesto=puesto;
+	}
 	public void mostrarDatos(){
 		System.out.println(this);
 	}
 	
 	@Override
 	public String toString() {
-		String result = "Lateral \n";
-		result +="Nombre = "+ this.getNombre() 
-		+ " Dorsal= " + this.getDorsal()
-		+" Equipo =" + this.getEquipo();
+		String result= "Extremo: "+ puesto+"\n";
+		result += "Nombre: "+ this.getNombre()
+		+ " Dorsal: "+ this.getDorsal()
+		+ " Equipo: "+this.getEquipo();
 		return result;
+		
+		
 	}
-	@Override
 	public boolean equals(Object obj) {
 		if(obj == null) {
 			return false;
@@ -41,12 +39,11 @@ public  class Lateral extends Defensa {
 			return false;
 		}
 		boolean iguales = false;
-		Lateral otroJugador = (Lateral) obj;
+		Extremo otroJugador= (Extremo)obj;
 		if(super.equals(obj) && this.puesto == otroJugador.puesto) {
 			iguales = true;
 		}
-		return iguales;
-
+			return iguales;
 	}
 
 }

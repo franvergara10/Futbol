@@ -1,28 +1,21 @@
 package equipo.jugador.defensa;
 
-import equipo.Equipo;
+public  class Central extends Defensa {
 
-public abstract class Central extends Defensa {
-	private int disputasRealizadas;
 	private int entradas;
 	
-	public Central(String nombre, int dorsal, Equipo equipo) {
-         super(nombre,dorsal,equipo);
+	public Central(String nombre, int dorsal, String equipo,int disputasRealizadas,int entradas) {
+         super(nombre,dorsal,equipo,disputasRealizadas);
          setEntradas(entradas);
 	}
-	public void setDisputasRealizadas(int disputasRealizadas) {
-		
-	}
-	public int getDisputasRealizadas() {
-		return this.disputasRealizadas;
-	}
+	
 	public void setEntradas(int entradas) {
 		
 	}
 	public int getEntradas() {
 		return this.entradas;
 	}
-	public void mostraDatos(){
+	public void mostrarDatos(){
 		System.out.println(this);
 	}
 	@Override

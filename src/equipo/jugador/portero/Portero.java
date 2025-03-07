@@ -1,23 +1,22 @@
 package equipo.jugador.portero;
 
-import equipo.Equipo;
 import equipo.jugador.Jugador;
 
-public abstract class Portero extends Jugador {
+public class Portero extends Jugador {
 	
 	private int paradas;
 	
-	public Portero(String nombre, int dorsal, Equipo equipo) {	
+	public Portero(String nombre, int dorsal, String equipo, int paradas) {	
 		super(nombre,dorsal,equipo);
 		setParadas(paradas);
 	}
 	public void setParadas(int paradas) {
-		
+		this.paradas = paradas;
 	}
 	public int getParadas() {
 		return this.paradas;
 	}
-	public void mostraDatos(){
+	public void mostrarDatos(){
 		System.out.println(this);
 	}
 	@Override
