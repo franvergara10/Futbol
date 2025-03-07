@@ -1,10 +1,12 @@
 package equipo.jugador.centrocampista;
 
+import equipo.Equipo;
+
 public class Mediapunta extends Centrocampista{
 	
 	private int asistencia;
 	
-	public Mediapunta(String nombre,int dorsal, String equipo,int pasesCompletados, int asistencia) {
+	public Mediapunta(String nombre,int dorsal, Equipo equipo,int pasesCompletados, int asistencia) {
 		super(nombre,dorsal,equipo,pasesCompletados);
 			setAsistencias(asistencia);
 	}

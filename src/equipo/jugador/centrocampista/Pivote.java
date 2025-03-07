@@ -1,11 +1,12 @@
 package equipo.jugador.centrocampista;
 
+import equipo.Equipo;
 
 public class Pivote extends Centrocampista {
 
 	private int intercepciones;
 
-	public Pivote(String nombre, int dorsal, String equipo, int pasesCompletados, int intercepciones) {
+	public Pivote(String nombre, int dorsal, Equipo equipo, int pasesCompletados, int intercepciones) {
 		super(nombre, dorsal, equipo, pasesCompletados);
 		setIntercepciones(intercepciones);
 	}

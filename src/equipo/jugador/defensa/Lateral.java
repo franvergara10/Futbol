@@ -1,12 +1,13 @@
 package equipo.jugador.defensa;
 
+import equipo.Equipo;
 import equipo.jugador.enums.EnumPuesto;
 
 public  class Lateral extends Defensa {
 
 	private EnumPuesto puesto;
 	
-	public Lateral(String nombre, int dorsal, String equipo, int disputasRealizadas, EnumPuesto puesto) {
+	public Lateral(String nombre, int dorsal, Equipo equipo, int disputasRealizadas, EnumPuesto puesto) {
 		super(nombre,dorsal,equipo,disputasRealizadas);
 		 setPuesto(puesto);
 	}
@@ -29,7 +30,8 @@ public  class Lateral extends Defensa {
 		String result = "Lateral \n";
 		result +="Nombre = "+ this.getNombre() 
 		+ " Dorsal= " + this.getDorsal()
-		+" Equipo =" + this.getEquipo();
+		+" Equipo =" + this.getEquipo()
+		+ "Posición = Lateral "+ this.getPuesto();
 		return result;
 	}
 	@Override
