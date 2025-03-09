@@ -1,11 +1,13 @@
 package equipo.jugador.delantero;
 
+import equipo.Equipo;
+
 public class DelanteroCentro extends Delantero{
 	
 	private int golesDePenalti;
 	
 	
-	public DelanteroCentro(String nombre, int dorsal, String equipo, int goles) {
+	public DelanteroCentro(String nombre, int dorsal, Equipo equipo, int goles, int golesDePenalti) {
 		super(nombre, dorsal, equipo,goles);
 		setGolesDePenalti(golesDePenalti);
 	}
@@ -27,7 +29,9 @@ public class DelanteroCentro extends Delantero{
 		String result = "Delantero Centro \n";
 		result +="Nombre = "+ this.getNombre() 
 		+ " Dorsal= " + this.getDorsal()
-		+" Equipo =" + this.getEquipo();
+		+" Equipo =" + this.getEquipo().getNombre()
+		+" Goles = " + this.getGoles()
+		+ " Goles de penalti = " + this.getGolesDePenalti();
 		return result;
 	}
 	public boolean equals(Object obj) {

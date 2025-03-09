@@ -54,7 +54,7 @@ public class Equipo {
 		boolean result= true;
 		
 		for(Jugador j: alineacion) {
-			if(j!=null) {
+			if(j==null) {
 				result =false;
 				break;
 			}

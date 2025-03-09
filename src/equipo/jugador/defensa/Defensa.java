@@ -13,12 +13,18 @@ public abstract class Defensa extends Jugador {
 		super(nombre,dorsal,equipo);
 		setDisputasRealizadas(disputasRealizadas);
 	}
-	public void setDisputasRealizadas(int disputasRealizadas) {
-		
-	}
+	
+	
 	public int getDisputasRealizadas() {
-		return this.disputasRealizadas;
+		return disputasRealizadas;
 	}
+
+
+	public void setDisputasRealizadas(int disputasRealizadas) {
+		this.disputasRealizadas = disputasRealizadas;
+	}
+
+
 	public EnumPuesto getPuesto() {
 		return puesto;
 	}
@@ -33,7 +39,7 @@ public abstract class Defensa extends Jugador {
 		result +="Nombre = "+ this.getNombre() 
 		+ " Dorsal= " + this.getDorsal()
 		+ " Posición= " + this.getPuesto()
-		+" Equipo =" + this.getEquipo();
+		+" Equipo =" + this.getEquipo().getNombre();
 		return result;
 	}
 	 @Override

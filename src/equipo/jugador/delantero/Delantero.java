@@ -1,5 +1,6 @@
 package equipo.jugador.delantero;
 
+import equipo.Equipo;
 import equipo.jugador.Jugador;
 
 
@@ -7,11 +8,11 @@ public abstract class Delantero extends Jugador {
 
 	private int goles;
 
-	public Delantero(String nombre, int dorsal, String equipo, int goles) {
+	public Delantero(String nombre, int dorsal, Equipo equipo, int goles) {
 		super(nombre, dorsal, equipo);
 		setGoles(goles);
-
 	}
+
 
 	public int getGoles() {
 		return goles;
@@ -29,7 +30,7 @@ public abstract class Delantero extends Jugador {
 		String result = "Jugador \n";
 		result +="Nombre = "+ this.getNombre() 
 		+ " Dorsal= " + this.getDorsal()
-		+" Equipo =" + this.getEquipo();
+		+" Equipo =" + this.getEquipo().getNombre();
 		return result;
 	}
 	

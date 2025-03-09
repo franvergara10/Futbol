@@ -28,7 +28,8 @@ public class Centrocampista extends Jugador {
 		String result = "Jugador \n";
 		result +="Nombre = "+ this.getNombre() 
 		+ " Dorsal= " + this.getDorsal()
-		+" Equipo =" + this.getEquipo();
+		+" Equipo =" + this.getEquipo().getNombre()
+		+ " Pases completados = " + this.getPasesCompletados();
 		return result;
 	}
 	

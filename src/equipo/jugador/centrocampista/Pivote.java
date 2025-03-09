@@ -29,7 +29,9 @@ public class Pivote extends Centrocampista {
 		String result = "Centrocampista \n";
 		result +="Nombre = "+ this.getNombre() 
 		+ " Dorsal= " + this.getDorsal()
-		+" Equipo =" + this.getEquipo();
+		+" Equipo =" + this.getEquipo().getNombre()
+		+" Intercepciones = " + this.getIntercepciones()
+		+" Pases completados = " + this.getPasesCompletados();
 		return result;
 	}
 	@Override

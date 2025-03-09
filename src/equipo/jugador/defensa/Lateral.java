@@ -11,6 +11,7 @@ public  class Lateral extends Defensa {
 		super(nombre,dorsal,equipo,disputasRealizadas);
 		 setPuesto(puesto);
 	}
+	
 
 
 	public EnumPuesto getPuesto() {
@@ -29,9 +30,10 @@ public  class Lateral extends Defensa {
 	public String toString() {
 		String result = "Lateral \n";
 		result +="Nombre = "+ this.getNombre() 
-		+ " Dorsal= " + this.getDorsal()
-		+" Equipo =" + this.getEquipo()
-		+ "Posición = Lateral "+ this.getPuesto();
+		+ " Dorsal = " + this.getDorsal()
+		+" Equipo = " + this.getEquipo().getNombre()
+		+ " Posición = Lateral "+ this.getPuesto()
+		+ " Disputas realizadas = " + this.getDisputasRealizadas();
 		return result;
 	}
 	@Override

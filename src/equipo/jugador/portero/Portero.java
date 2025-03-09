@@ -25,7 +25,8 @@ public class Portero extends Jugador {
 		String result = "Portero \n";
 		result +="Nombre = "+ this.getNombre() 
 		+ " Dorsal= " + this.getDorsal()
-		+" Equipo =" + this.getEquipo();
+		+" Equipo =" + this.getEquipo().getNombre()
+		+ " Paradas = " + this.getParadas();
 		return result;
 	}
 	@Override

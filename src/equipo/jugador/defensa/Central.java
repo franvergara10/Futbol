@@ -11,12 +11,14 @@ public  class Central extends Defensa {
          setEntradas(entradas);
 	}
 	
-	public void setEntradas(int entradas) {
-		
-	}
 	public int getEntradas() {
-		return this.entradas;
+		return entradas;
 	}
+	public void setEntradas(int entradas) {
+		this.entradas = entradas;
+	}
+
+	
 	public void mostrarDatos(){
 		System.out.println(this);
 	}
@@ -25,7 +27,9 @@ public  class Central extends Defensa {
 		String result = "Central \n";
 		result +="Nombre = "+ this.getNombre() 
 		+ " Dorsal= " + this.getDorsal()
-		+" Equipo =" + this.getEquipo();
+		+" Equipo =" + this.getEquipo().getNombre()
+		+ " Disputas realizadas = " + this.getDisputasRealizadas()
+		+ " Entradas = " + this.getEntradas();
 		return result;
 	}
 	 @Override

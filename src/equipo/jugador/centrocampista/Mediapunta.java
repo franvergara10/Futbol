@@ -8,16 +8,17 @@ public class Mediapunta extends Centrocampista{
 	
 	public Mediapunta(String nombre,int dorsal, Equipo equipo,int pasesCompletados, int asistencia) {
 		super(nombre,dorsal,equipo,pasesCompletados);
-			setAsistencias(asistencia);
+			setAsistencia(asistencia);
 	}
 	
-	public int getAsistencias() {
+	public int getAsistencia() {
 		return asistencia;
 	}
-	
-	public void setAsistencias(int asistencia) {
-		
+
+	public void setAsistencia(int asistencia) {
+		this.asistencia = asistencia;
 	}
+
 	public void mostrarDatos() {
 		System.out.println(this);
 	}
@@ -25,8 +26,10 @@ public class Mediapunta extends Centrocampista{
 	public String  toString() {
 		String result= "Mediapunta:\n";
 		result += "Nombre= "+ getNombre()
-		+ "Dorsal: "+ getDorsal()
-		+"Equipo: "+ getEquipo();
+		+ " Dorsal: "+ getDorsal()
+		+" Equipo: "+ getEquipo().getNombre()
+		+" Asistencias = " + this.getAsistencia()
+		+" Pases completados = " + this.getPasesCompletados();
 		return result;
 	}
 	
