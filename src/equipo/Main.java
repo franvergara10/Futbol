@@ -24,6 +24,7 @@ public class Main {
 		int dorsal;
 		int opcion;
 		Equipo equipo = new Equipo("Sevilla FC");
+		
 
 		do {
 			System.out.println("\n--- Menú principal ---");

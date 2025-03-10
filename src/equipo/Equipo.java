@@ -51,11 +51,11 @@ public class Equipo {
 		}
 	}
 	public boolean completo() {
-		boolean result= true;
+		boolean result = true;
 		
 		for(Jugador j: alineacion) {
 			if(j==null) {
-				result =false;
+				result = false;
 				break;
 			}
 		}
